@@ -1,22 +1,60 @@
 <template>
-	<section>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-6">
-
-				</div>
-			</div>
-		</div>
-	</section>
+	<section class="StartPage" v-html="PAGE.page_code"></section>
 </template>
 
 <script>
-    export default {}
+    import {mapGetters} from "vuex";
+
+    export default {
+
+        data() {
+            return {};
+        },
+        computed: {
+            ...mapGetters(["PAGE"])
+        },
+        mounted() {
+            this.$store.dispatch("GET_PAGE", {
+                id: 5
+            });
+        }
+    }
 </script>
 
-<style scoped lang="scss">
-	.Card {
+<style lang="scss">
+	.StartPage {
 
+		.primary {
+			.Title {
+				font-size: 7.4rem;
+				line-height: 8rem;
+				margin: 0;
+				padding: 0;
+			}
+
+			.Content {
+				font-size: 2rem;
+				line-height: 3.2rem;
+			}
+		}
+
+	}
+
+	.middle {
+		display: flex;
+		align-items: center;
+	}
+
+	._container {
+		flex-direction: column;
+		padding: 5rem 0;
+		margin-left: 3rem;
+		margin-right: 3rem;
+		display: flex;
+		position: relative;
+	}
+
+	.Card {
 		margin-bottom: 2rem;
 		box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, .05);
 
@@ -39,8 +77,8 @@
 		}
 
 		.Title {
-			font-size: 1rem;
-			font-weight: 600;
+			font-size: 2rem;
+			font-weight: 400;
 			color: #495057;
 			margin: 0;
 		}
@@ -50,7 +88,5 @@
 			min-height: 1px;
 			padding: 1.25rem;
 		}
-
 	}
-
 </style>
