@@ -16,7 +16,7 @@ Vue.use(VueRouter)
 
 // Set Vue store
 Vue.use(VueAxios, axios)
-axios.defaults.baseURL = "http://wordpress.portfolio.mkava.pl/";
+axios.defaults.baseURL = "https://wordpress.portfolio.mkava.pl/";
 axios.defaults.withCredentials = true;
 
 new Vue({
