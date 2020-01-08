@@ -7,6 +7,9 @@ import Blog from '../components/Pages/Blog'
 // Posts
 import SinglePost from '../components/Pages/Post'
 
+// Todo
+import Todo from "../components/Pages/Todo";
+
 // Routes
 const routes = [
     {
@@ -25,6 +28,13 @@ const routes = [
         path: '/blog/:slug',
         name: 'single-post',
         component: SinglePost
+    },
+    {
+        path: '/todo',
+        name: 'todo',
+        component: Todo,
+        props: true
+
     }
 ];
 
