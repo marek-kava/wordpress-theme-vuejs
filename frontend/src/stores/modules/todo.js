@@ -27,7 +27,6 @@ export default {
         },
         DELETE_TODO: (state, payload) => {
             let todoIndex = state.todos.findIndex(x => x !== null && x.id === payload.id);
-            console.log(todoIndex);
             delete state.todos[todoIndex];
             localStorage.setItem('todos', JSON.stringify(state.todos));
         }
