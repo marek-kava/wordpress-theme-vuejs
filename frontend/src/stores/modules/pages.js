@@ -18,6 +18,7 @@ export default {
             state.page = paylaod;
         },
         SET_PAGES: (state, payload) => {
+            payload.sort((x, y) => (x.id > y.id) ? 1 : -1);
             state.pages = payload;
         }
     },
