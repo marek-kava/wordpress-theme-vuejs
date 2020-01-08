@@ -1,8 +1,8 @@
 <template>
-	<div class="Body pt-0">
-		<CardContent v-bind:excerpt="post.excerpt"/>
-		<CardLink v-bind:slug="post.slug" />
-	</div>
+    <div class="Body pt-0">
+        <CardContent v-bind:excerpt="post.excerpt"/>
+        <CardLink v-bind:slug="post.slug"/>
+    </div>
 </template>
 
 <script>
@@ -14,14 +14,14 @@
             CardContent,
             CardLink
         },
-				props: ['post']
+        props: ['post']
     }
 </script>
 
 <style scoped lang="scss">
-	.Body {
-		flex: 1 1 auto;
-		min-height: 1px;
-		padding: 1.25rem;
-	}
+    .Body {
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 1.25rem;
+    }
 </style>
